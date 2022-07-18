@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           primaryColor: Colors.blue,
           scaffoldBackgroundColor: Colors.white,
-          appBarTheme: AppBarTheme(
+          appBarTheme: const AppBarTheme(
               color: Colors.white,
               centerTitle: true,
               elevation: 0,
@@ -26,9 +26,9 @@ class MyApp extends StatelessWidget {
                 fontSize: 24,
                 fontWeight: FontWeight.w600,
               ),
-              iconTheme: IconThemeData(color: Colors.black))),
+              iconTheme:  IconThemeData(color: Colors.black))),
       builder: (_, child) => _Unfocus(child: child!),
-      home: ChatScreen(),
+      home: const ChatScreen(),
     );
   }
 }
@@ -42,6 +42,7 @@ class _Unfocus extends StatelessWidget {
     return GestureDetector(
       behavior: HitTestBehavior.opaque,
       onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
+      child: child,
     );
   }
 }

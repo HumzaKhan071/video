@@ -18,6 +18,7 @@ class _VideoCallScreenState extends State<VideoCallScreen> {
     enabledPermission: [
       Permission.camera,
       Permission.microphone,
+      
     ],
   );
 
@@ -55,7 +56,8 @@ class _VideoCallScreenState extends State<VideoCallScreen> {
                 enabledButtons: [
                   BuiltInButtons.toggleCamera,
                   BuiltInButtons.callEnd,
-                  BuiltInButtons.toggleMic
+                  BuiltInButtons.toggleMic,
+                  
                 ],
               ),
             ],
